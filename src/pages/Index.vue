@@ -1,7 +1,12 @@
 <template>
   <q-page>
     <!--<img alt="Quasar logo" src="~assets/quasar-logo-full.svg">-->
-    <q-list bordered>
+    <q-spinner
+      v-if="loading"
+      color="primary"
+      size="3em"
+    />    
+    <q-list v-else bordered>
       <q-item 
         clickable 
         v-ripple
@@ -28,15 +33,17 @@ export default {
   async created () {
       var le = await axios.get('https://www.reddit.com/r/aww.json?raw_json=1')
       try{
-      this.posts = le.data.data.children
-      console.log(le)
+        this.loading = false  
+        this.posts = le.data.data.children
+        console.log(le)
       }
       catch(e){
-
+        this.loading = false
       }
   },
   data() {
     return {
+      loading: true,
       posts:[]
     }
   }
