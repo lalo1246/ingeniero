@@ -30,6 +30,7 @@ module.exports = function (ctx) {
       // lang: 'de', // Quasar language
 
       // all: true, // --- includes everything; for dev only!
+      
 
       components: [
         'QLayout',
@@ -59,7 +60,8 @@ module.exports = function (ctx) {
         'QCardSection',
         'QCardActions',
         'QImg',
-        'QDrawer'
+        'QDrawer',
+        'QInput'
       ],
 
       directives: [
@@ -70,7 +72,8 @@ module.exports = function (ctx) {
       // Quasar plugins
       plugins: [
         'Notify',
-        'Loading'
+        'Loading',
+        'GoBack'        
       ]
     },
 

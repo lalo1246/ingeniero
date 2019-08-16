@@ -8,7 +8,7 @@
       size="3em"
     />    
     <q-list bordered>
-      <q-btn class="glossy" color="teal" label="Actualizar"  @click="actualizar" />
+      <q-btn to="/#" color="primary" label="Logout"/>
       <q-item 
         clickable 
         v-ripple
@@ -47,7 +47,7 @@ import axios from 'axios'
 export default {
   name: 'PageIndex',
   async created () {
-      var url = 'http://192.168.1.12/ingeniero-backend/productos'
+      var url = 'http://c1600415.ferozo.com/productos'
       var le = await axios.get(url)
       this.loading = false  
       try{

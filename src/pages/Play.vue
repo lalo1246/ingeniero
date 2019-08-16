@@ -6,6 +6,8 @@
         <div>
           <q-btn color="teal" label="Show Loading" @click="showLoading ()" />
           <q-btn color="amber" glossy label="Amber" @click="handleClick" />
+          <q-btn to="/backend" color="purple" glossy label="backend" />
+          <q-btn to="/#" color="primary" label="Logout"/>
           <q-input outlined v-model="myInput" label="Outlined" />
         </div>
         <p

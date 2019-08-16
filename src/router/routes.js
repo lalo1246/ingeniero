@@ -9,8 +9,15 @@ const routes = [
     ]
   },
   {
+    path: '/backend',
+    component: () => import('layouts/HeaderPicture.vue'),
+    children: [
+      { path: '', component: () => import('pages/Index.vue') }
+    ]
+  },
+  {
     path: '/',
-    component: () => import('layouts/headerPicture.vue'),
+    component: () => import('layouts/login.vue'),
     children: [
       { path: '', component: () => import('pages/Index.vue') }
     ]
